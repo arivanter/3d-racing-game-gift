@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0qed1t8on5uy"]
+
+[ext_resource type="PackedScene" uid="uid://b4ec8nenekbo3" path="res://Cars/ShelbyGT500/Shelby.glb" id="1_fnoc2"]
+[ext_resource type="Texture2D" uid="uid://b1tbxcvvobshu" path="res://Assets/Textures/Glass.png" id="2_dvdvp"]
+[ext_resource type="Texture2D" uid="uid://bpud1iajr2uvu" path="res://Assets/Textures/Black.jpg" id="3_inhcu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrkq2"]
+transparency = 1
+blend_mode = 3
+albedo_texture = ExtResource("2_dvdvp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trhhj"]
+albedo_texture = ExtResource("3_inhcu")
+
+[node name="Shelby" instance=ExtResource("1_fnoc2")]
+
+[node name="Mustang GT500 Shelby 1967" parent="." index="0"]
+transform = Transform3D(469.998, 0, -1.40832, 0, 470, 0, 1.40832, 0, 469.998, 0, 0, 0)
+
+[node name="Glass_Car" parent="Mustang GT500 Shelby 1967" index="15"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jrkq2")
+
+[node name="Hood" parent="Mustang GT500 Shelby 1967" index="19"]
+surface_material_override/0 = SubResource("StandardMaterial3D_trhhj")
